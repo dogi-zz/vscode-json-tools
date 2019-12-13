@@ -1,0 +1,44 @@
+{
+	"name": "dogi-json",
+	"displayName": "dogi-json",
+	"author": {
+		"name": "Dogan Cinbir"
+	},
+	"description": "Better Json Formatter",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.35.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:json"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.helloWorld",
+				"title": "Hello World Command"
+			}
+		]
+	},
+	"scripts": {
+		"dev-parser": "npx nodemon -e ts -w ./src -x 'npx ts && node out/json/test.js'",
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^10.12.21",
+		"nodemon": "^1.19.1",
+		"tslint": "^5.12.1",
+		"typescript": "^3.5.3",
+		"ts": "^0.2.2",
+		"ts-node": "^8.3.0",
+		"vscode": "^1.1.28"
+	}
+}
