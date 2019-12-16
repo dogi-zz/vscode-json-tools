@@ -1,6 +1,6 @@
-# o-scad README
+# README
 
-This is the README for your extension "o-scad". After writing up a brief description, we recommend including the following sections.
+This is the README for your extension
 
 ## Features
 

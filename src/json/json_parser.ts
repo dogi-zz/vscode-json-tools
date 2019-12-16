@@ -11,9 +11,6 @@ export class JsonSyntaxParserFactory extends BaseParserFactory<JsonTokenType>{
     constructor() {
         super();
 
-        // this.addRule('comment', () => new ScadComment(), (rule, result) => {
-        //
-
         this.addRule('[expression]', () => <JsonNode>{}, (rule, subject) => {
             if (rule.expectRule('null', (c) => { subject = c; })) { return [subject, rule.index]; }
             if (rule.expectRule('bool', (c) => { subject = c; })) { return [subject, rule.index]; }
