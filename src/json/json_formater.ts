@@ -60,6 +60,9 @@ export class JsonFormater extends BaseFormater<JsonTokenType>{
             if (token.type === 'SYMBOL' && [','].includes(token.value)) {
                 this.setMarginRight(token, 1);
             }
+            if (token.type === 'SYMBOL' && [':'].includes(token.value)) {
+                this.setMarginRight(token, 1);
+            }
         });
     }
 

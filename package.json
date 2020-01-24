@@ -39,7 +39,6 @@
 		}
 	},
 	"scripts": {
-		"dev-parser": "npx nodemon -e ts -w ./src -x 'npx ts && node out/json/test.js'",
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
 		"watch": "tsc -watch -p ./",

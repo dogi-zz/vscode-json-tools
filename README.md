@@ -36,5 +36,9 @@ Initial release of the plugin
 
 ### 1.0.1
 
-Just forgot the readme ;)
+Added the Readme
+
+### 1.0.2
+
+Better formating reults by adding space after ":" 
 
