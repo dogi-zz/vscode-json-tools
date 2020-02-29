@@ -7,10 +7,14 @@ const fs = require('fs');
 
 console.info("=== START APPLICATION ===================");
 
+console.info(process.argv);
+
 let verbose = true;
 let bounds: number[] = [];
-let file = '/home/dogan/git/Kalypso/design/src/assets/configs/graph-bars.json';
-//bounds = [110, 126];
+let file = process.argv[2];
+if ( process.argv[2].length === 5 ){
+    bounds = [ parseInt(process.argv[3]),  parseInt(process.argv[4])];
+}
 
 let printTokens = true;
 let printTree = false;

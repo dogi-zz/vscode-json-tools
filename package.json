@@ -2,10 +2,16 @@
 	"name": "dogi-json",
 	"displayName": "dogi-json",
 	"author": {
-		"name": "Dogan Cinbir"
+		"name": "Dogan Cinbir",
+		"email": "dogan@cinbir.de"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dogi-zz/ts-parserformatter.git"
+	},
+	"publisher": "dogi-zz",
 	"description": "Better Json Formatter",
-	"version": "0.0.1",
+	"version": "1.0.2",
 	"engines": {
 		"vscode": "^1.35.0"
 	},
@@ -24,14 +30,15 @@
 			}
 		],
 		"menus": {
-			"editor/context": [{
-				"when": "resourceLangId == json",
-				"command": "dogi-json.squish"
-		  	}]
+			"editor/context": [
+				{
+					"when": "resourceLangId == json",
+					"command": "dogi-json.squish"
+				}
+			]
 		}
 	},
 	"scripts": {
-		"dev-parser": "npx nodemon -e ts -w ./src -x 'npx ts && node out/json/test.js'",
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
 		"watch": "tsc -watch -p ./",
